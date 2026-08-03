@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>notebook — research notes</title>
+<meta name="description" content="A running notebook of research notes on vision, EEG decoding, diffusion models, and NeRF/3DGS.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-row">
+    <a class="wordmark" href="index.html"><span class="glyph">λ</span>notebook<span class="sub">/ research notes</span></a>
+    <div class="masthead-tools">
+      <button class="theme-toggle" id="themeToggle" type="button">dark</button>
+    </div>
+  </div>
+  <div class="trace-wrap" id="trace"></div>
+</header>
+
+<main class="wrap">
+  <div class="lede">
+    <h1>Notes, kept as I read them</h1>
+    <p>Vision, EEG decoding, diffusion models, NeRF/3DGS, and the math underneath. Pasted straight from working sessions, not polished after the fact.</p>
+  </div>
+
+  <div class="controls">
+    <input class="search" id="search" type="search" placeholder="search notes…" aria-label="Search notes">
+  </div>
+
+  <div class="tags" id="tagFilters" role="group" aria-label="Filter by tag"></div>
+
+  <ul class="note-list" id="noteList">
+    <li class="loading">loading notebook…</li>
+  </ul>
+</main>
+
+<script src="assets/js/common.js"></script>
+<script src="assets/js/index.js"></script>
+</body>
+</html>

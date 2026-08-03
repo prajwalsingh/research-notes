@@ -1,0 +1,20 @@
+{
+  "notes": [
+    {
+      "slug": "pcr-vs-pls",
+      "title": "Principal Component Regression",
+      "date": "2026-08-03",
+      "tags": ["eeg", "regression", "math"],
+      "excerpt": "OLS blows up under multicollinearity across nearby channels. PCR fixes it by orthogonalizing features first, but the fix is blind to the target — which is exactly the failure mode PLS was built to avoid.",
+      "file": "pcr-vs-pls.md"
+    },
+    {
+      "slug": "pls",
+      "title": "Partial Least Squares",
+      "date": "2026-08-03",
+      "tags": ["eeg", "regression", "math", "images"],
+      "excerpt": "PLS is a regression technique that finds latent variables that maximize covariance between features and targets. It is particularly useful when features are highly collinear, as it avoids the pitfalls of OLS and PCR by considering the target variable during dimensionality reduction.",
+      "file": "pls.md"
+    }
+  ]
+}
