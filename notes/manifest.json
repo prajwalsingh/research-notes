@@ -23,6 +23,23 @@
       "tags": ["multimodal", "contrastive image text"],
       "excerpt": "Locked Image Text Tuning is a technique for fine-tuning image-text models by locking the image encoder and only updating the text encoder.",
       "file": "locked_image_text_tuning.md"
+    },
+    {
+      "slug": "siglip",
+      "title": "SiGLIP: A Simple Generalized Language-Image Pre-training Approach",
+      "date": "2026-08-04",
+      "tags": ["multimodal", "contrastive image text"],
+      "excerpt": "SiGLIP is a simple generalized language-image pre-training approach that achieves state-of-the-art performance on various multimodal tasks.",
+      "file": "siglip.md"
+    }
+    ,
+    {
+      "slug": "silc_tips",
+      "title": "Self Distillation for Local to Global Consistency (SiLC) and TIPS",
+      "date": "2026-08-04",
+      "tags": ["multimodal", "contrastive image text"],
+      "excerpt": "SiLC and TIPS are techniques for self-distillation that improve consistency between local and global representations in multimodal models.",
+      "file": "silc_tips.md"
     }
   ]
 }
