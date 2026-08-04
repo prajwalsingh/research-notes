@@ -57,6 +57,36 @@
     onScroll();
   }
 
+  /* marked.js parses _ and * as emphasis markers before KaTeX ever runs.
+     LaTeX subscripts like \hat{v}_i have an underscore preceded by "}", not
+     a letter, so GFM's intraword-underscore exception doesn't protect them —
+     markdown goes hunting for the next stray underscore anywhere in the
+     paragraph to "close" the emphasis, mangling unrelated math and prose in
+     between. Fix: pull every math region out into an opaque placeholder
+     before marked sees the text, then splice the original LaTeX back into
+     the rendered HTML afterwards, right before KaTeX runs. */
+  function protectMath(text){
+    const store = [];
+    const stash = (raw) => {
+      store.push(raw);
+      return `\u0001MATH${store.length - 1}\u0001`;
+    };
+    return {
+      text: text
+        .replace(/\$\$([\s\S]+?)\$\$/g, stash)
+        .replace(/\\\[([\s\S]+?)\\\]/g, stash)
+        .replace(/\\\(([\s\S]+?)\\\)/g, stash)
+        .replace(/\$([^\n$]+?)\$/g, stash),
+      store
+    };
+  }
+
+  function restoreMath(html, store){
+    return html.replace(/\u0001MATH(\d+)\u0001/g, (_, i) =>
+      store[Number(i)].replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    );
+  }
+
   function renderMath(){
     if (window.renderMathInElement){
       renderMathInElement(bodyEl, {
@@ -88,7 +118,7 @@
       return;
     }
 
-    fetch('notes/manifest.json')
+    fetch('notes/manifest.json', { cache: 'no-store' })
       .then(r => r.json())
       .then(data => {
         const entry = (data.notes || []).find(n => n.slug === slug);
@@ -103,14 +133,15 @@
           <span id="readTime"></span>
         `;
 
-        return fetch(`notes/${entry.file}`).then(r => {
+        return fetch(`notes/${entry.file}`, { cache: 'no-store' }).then(r => {
           if (!r.ok) throw new Error(`notes/${entry.file} not found (HTTP ${r.status})`);
           return r.text();
         }).then(md => {
           const readEl = document.getElementById('readTime');
           if (readEl) readEl.textContent = `${readingTime(md)} min read`;
           marked.setOptions({ gfm: true, breaks: false });
-          bodyEl.innerHTML = marked.parse(md);
+          const { text: safeMd, store } = protectMath(md);
+          bodyEl.innerHTML = restoreMath(marked.parse(safeMd), store);
           buildToc();
           highlightCode();
           renderMath();

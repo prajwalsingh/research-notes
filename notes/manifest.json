@@ -15,6 +15,14 @@
       "tags": ["eeg", "regression", "math", "images"],
       "excerpt": "PLS is a regression technique that finds latent variables that maximize covariance between features and targets. It is particularly useful when features are highly collinear, as it avoids the pitfalls of OLS and PCR by considering the target variable during dimensionality reduction.",
       "file": "pls.md"
+    },
+    {
+      "slug": "locked_image_text_tuning",
+      "title": "Locked Image Text Tuning",
+      "date": "2026-08-04",
+      "tags": ["multimodal", "contrastive image text"],
+      "excerpt": "Locked Image Text Tuning is a technique for fine-tuning image-text models by locking the image encoder and only updating the text encoder.",
+      "file": "locked_image_text_tuning.md"
     }
   ]
 }

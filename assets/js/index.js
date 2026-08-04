@@ -60,7 +60,7 @@
     });
   }
 
-  fetch('notes/manifest.json')
+  fetch('notes/manifest.json', { cache: 'no-store' })
     .then(r => {
       if (!r.ok) throw new Error('manifest.json not found (HTTP ' + r.status + ')');
       return r.json();

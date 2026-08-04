@@ -173,12 +173,12 @@ a:hover{ color: var(--ink); }
   margin: 1.1rem 0 0.25rem; display: flex; gap: 0.9rem; flex-wrap: wrap;
 }
 .note-header h1{
-  font-family: var(--font-display); font-weight: 600; font-size: 2.55rem;
+  font-family: var(--font-display); font-weight: 600; font-size: 2.15rem;
   line-height: 1.2; letter-spacing: -0.01em; margin: 0.2rem 0 0.9rem;
 }
 
 .note-toc{
-  font-family: var(--font-mono); font-size: 0.9rem;
+  font-family: var(--font-mono); font-size: 0.78rem;
   border: 1px solid var(--line); border-radius: var(--radius);
   padding: 0.9rem 1.1rem; margin: 0.5rem 0 2.2rem; background: var(--paper);
 }
@@ -198,13 +198,13 @@ a:hover{ color: var(--ink); }
 .note-toc a:hover{ color: var(--ink); }
 .note-toc a.active{ color: var(--signal); border-bottom-color: var(--signal); }
 
-.note-body{ font-size: 1.5rem; }
+.note-body{ font-size: 1.4rem; }
 .note-body > *:first-child{ margin-top: 0; }
 .note-body h2, .note-body h3{
   font-family: var(--font-display); font-weight: 600; color: var(--ink);
   scroll-margin-top: 5.5rem;
 }
-.note-body h2{ font-size: 1.45rem; margin: 2.4rem 0 0.9rem; padding-top: 0.4rem;
+.note-body h2{ font-size: 1.65rem; margin: 2.4rem 0 0.9rem; padding-top: 0.4rem;
   border-top: 1px solid var(--line); }
 .note-body h2:first-of-type{ border-top: none; padding-top: 0; margin-top: 1.4rem; }
 .note-body h3{ font-size: 1.14rem; margin: 1.8rem 0 0.6rem; }

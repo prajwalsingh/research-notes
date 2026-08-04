@@ -85,13 +85,19 @@ they sit in the repo, so what you see locally is what ships.
 ## Writing notes that render cleanly
 
 - Inline math: `$...$`. Display math: `$$...$$` or `\[...\]`.
-- Keep everything inside a `$$...$$` block on contiguous lines — a blank
-  line inside it will cause the markdown parser to split it into two
-  paragraphs before KaTeX ever sees it.
+- Underscores and asterisks inside math (`\theta_I`, `S_{ij}`, `x_i`) are
+  protected from markdown's own emphasis parser before rendering, so LaTeX
+  subscripts and multiplication won't get eaten or turn into stray italics —
+  including when a `$$...$$` block spans a blank line.
 - Fenced code blocks (` ```python `) get syntax highlighting automatically.
-- Headings (`##`, `###`) automatically populate the right-hand table of
-  contents on the note page.
+- Headings (`##`, `###`) automatically populate the "on this page" bar on
+  the note page.
 - Tables, blockquotes, and images use plain GitHub-flavored markdown.
+- If you paste text copied from a rendered chat UI (rather than raw
+  markdown source), section titles and paragraph breaks often collapse
+  into one run-on block of text. You'll need to re-add `##` headings and
+  blank lines between paragraphs by hand — the renderer can't recover
+  structure that isn't in the text.
 
 ## Design notes
 
