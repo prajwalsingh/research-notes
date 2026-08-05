@@ -31,8 +31,7 @@
       "tags": ["multimodal", "contrastive image text"],
       "excerpt": "SiGLIP is a simple generalized language-image pre-training approach that achieves state-of-the-art performance on various multimodal tasks.",
       "file": "siglip.md"
-    }
-    ,
+    },
     {
       "slug": "silc_tips",
       "title": "Self Distillation for Local to Global Consistency (SiLC) and TIPS",
@@ -40,6 +39,14 @@
       "tags": ["multimodal", "contrastive image text"],
       "excerpt": "SiLC and TIPS are techniques for self-distillation that improve consistency between local and global representations in multimodal models.",
       "file": "silc_tips.md"
+    },
+    {
+      "slug": "qformer",
+      "title": "Understanding the Q-Former in BLIP-2",
+      "date": "2026-08-05",
+      "tags": ["multimodal", "contrastive image text"],
+      "excerpt": "The Q-Former is a key component in BLIP-2 that enables effective communication between the image and text modalities.",
+      "file": "qformer.md"
     }
   ]
 }
