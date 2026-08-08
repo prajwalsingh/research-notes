@@ -47,6 +47,22 @@
       "tags": ["multimodal", "contrastive image text"],
       "excerpt": "The Q-Former is a key component in BLIP-2 that enables effective communication between the image and text modalities.",
       "file": "qformer.md"
+    },
+    {
+      "slug": "pixel_shuffle",
+      "title": "Pixel Shuffle Method for VLMs Reducing Tokens",
+      "date": "2026-08-08",
+      "tags": ["multimodal", "contrastive image text"],
+      "excerpt": "The Pixel Shuffle method is a technique used in vision-language models (VLMs) to reduce the number of tokens by rearranging the spatial dimensions of feature maps, leading to more efficient processing.",
+      "file": "pixel_shuffle.md"
+    },
+    {
+      "slug": "continuous_to_discrete_tok",
+      "title": "Continuous to Discrete Tokenization for VLMs to VLA",
+      "date": "2026-08-08",
+      "tags": ["multimodal", "contrastive image text", "robotics"],
+      "excerpt": "Continuous to Discrete Tokenization is a method for converting continuous representations in vision-language models (VLMs) to discrete tokens, facilitating the transition from VLMs to vision-language agents (VLA) for tasks such as robotics.",
+      "file": "continuous_to_discrete_tok.md"
     }
   ]
 }
