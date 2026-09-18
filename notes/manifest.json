@@ -63,6 +63,14 @@
       "tags": ["multimodal", "contrastive image text", "robotics"],
       "excerpt": "Continuous to Discrete Tokenization is a method for converting continuous representations in vision-language models (VLMs) to discrete tokens, facilitating the transition from VLMs to vision-language agents (VLA) for tasks such as robotics.",
       "file": "continuous_to_discrete_tok.md"
+    },
+    {
+      "slug": "cca",
+      "title": "Cross Correlation Analysis (CCA) for Multimodal Representations",
+      "date": "2026-09-18",
+      "tags": ["multimodal", "brain", "image"],
+      "excerpt": "Cross Correlation Analysis (CCA) is a technique for analyzing the correlation between representations from different modalities in multimodal models.",
+      "file": "cca.md"
     }
   ]
 }
