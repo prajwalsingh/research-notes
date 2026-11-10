@@ -1,5 +1,3 @@
-# QuickGELU
-
 The coefficient 1.702 is used because it provides the closest mathematical approximation of the GELU (Gaussian Error Linear Unit) activation function when using a standard sigmoid function.
 
 OpenAI adopted this specific approximation in models like GPT-2 and CLIP to make computation faster while maintaining high accuracy. Here is the exact mathematical breakdown of why that number is chosen:
