@@ -71,6 +71,15 @@
       "tags": ["multimodal", "brain", "image"],
       "excerpt": "Cross Correlation Analysis (CCA) is a technique for analyzing the correlation between representations from different modalities in multimodal models.",
       "file": "cca.md"
+    },
+    {
+      "slug": "quick gelu",
+      "title": "Quick GELU Activation Function",
+      "date": "2026-11-10",
+      "tags": ["multimodal", "image", "represenation"],
+      "excerpt": "Quick GELU is a fast approximation of the GELU activation function, which is commonly used in neural networks for its smooth and non-linear properties.",
+      "file": "quick_gelu.md"
     }
+    
   ]
 }
